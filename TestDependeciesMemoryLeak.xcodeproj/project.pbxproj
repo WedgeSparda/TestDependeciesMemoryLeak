@@ -13,6 +13,10 @@
 		964B43C429BB0EA4007DBDBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964B43C229BB0EA4007DBDBE /* Main.storyboard */; };
 		964B43C629BB0EA5007DBDBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 964B43C529BB0EA5007DBDBE /* Assets.xcassets */; };
 		964B43C929BB0EA5007DBDBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964B43C729BB0EA5007DBDBE /* LaunchScreen.storyboard */; };
+		964B43D229BB0ED0007DBDBE /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = 964B43D129BB0ED0007DBDBE /* Dependencies */; };
+		964B43D829BB0F86007DBDBE /* StartTimerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964B43D729BB0F86007DBDBE /* StartTimerUseCase.swift */; };
+		964B43DA29BB172B007DBDBE /* SubscribeToTimerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964B43D929BB172B007DBDBE /* SubscribeToTimerUseCase.swift */; };
+		964B43DD29BB1E4B007DBDBE /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964B43DB29BB1E4B007DBDBE /* ModalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,9 @@
 		964B43C529BB0EA5007DBDBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		964B43C829BB0EA5007DBDBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		964B43CA29BB0EA5007DBDBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		964B43D729BB0F86007DBDBE /* StartTimerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTimerUseCase.swift; sourceTree = "<group>"; };
+		964B43D929BB172B007DBDBE /* SubscribeToTimerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeToTimerUseCase.swift; sourceTree = "<group>"; };
+		964B43DB29BB1E4B007DBDBE /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				964B43D229BB0ED0007DBDBE /* Dependencies in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +64,42 @@
 		964B43BB29BB0EA4007DBDBE /* TestDependeciesMemoryLeak */ = {
 			isa = PBXGroup;
 			children = (
+				964B43D629BB0F58007DBDBE /* Use Cases */,
+				964B43D529BB0F39007DBDBE /* Modal */,
+				964B43D329BB0F0C007DBDBE /* Main */,
 				964B43BC29BB0EA4007DBDBE /* AppDelegate.swift */,
 				964B43BE29BB0EA4007DBDBE /* SceneDelegate.swift */,
-				964B43C029BB0EA4007DBDBE /* ViewController.swift */,
 				964B43C229BB0EA4007DBDBE /* Main.storyboard */,
 				964B43C529BB0EA5007DBDBE /* Assets.xcassets */,
 				964B43C729BB0EA5007DBDBE /* LaunchScreen.storyboard */,
 				964B43CA29BB0EA5007DBDBE /* Info.plist */,
 			);
 			path = TestDependeciesMemoryLeak;
+			sourceTree = "<group>";
+		};
+		964B43D329BB0F0C007DBDBE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				964B43C029BB0EA4007DBDBE /* ViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		964B43D529BB0F39007DBDBE /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				964B43DB29BB1E4B007DBDBE /* ModalViewController.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		964B43D629BB0F58007DBDBE /* Use Cases */ = {
+			isa = PBXGroup;
+			children = (
+				964B43D729BB0F86007DBDBE /* StartTimerUseCase.swift */,
+				964B43D929BB172B007DBDBE /* SubscribeToTimerUseCase.swift */,
+			);
+			path = "Use Cases";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +118,9 @@
 			dependencies = (
 			);
 			name = TestDependeciesMemoryLeak;
+			packageProductDependencies = (
+				964B43D129BB0ED0007DBDBE /* Dependencies */,
+			);
 			productName = TestDependeciesMemoryLeak;
 			productReference = 964B43B929BB0EA4007DBDBE /* TestDependeciesMemoryLeak.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +149,9 @@
 				Base,
 			);
 			mainGroup = 964B43B029BB0EA4007DBDBE;
+			packageReferences = (
+				964B43D029BB0ED0007DBDBE /* XCRemoteSwiftPackageReference "swift-dependencies" */,
+			);
 			productRefGroup = 964B43BA29BB0EA4007DBDBE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +181,9 @@
 			files = (
 				964B43C129BB0EA4007DBDBE /* ViewController.swift in Sources */,
 				964B43BD29BB0EA4007DBDBE /* AppDelegate.swift in Sources */,
+				964B43D829BB0F86007DBDBE /* StartTimerUseCase.swift in Sources */,
+				964B43DA29BB172B007DBDBE /* SubscribeToTimerUseCase.swift in Sources */,
+				964B43DD29BB1E4B007DBDBE /* ModalViewController.swift in Sources */,
 				964B43BF29BB0EA4007DBDBE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +402,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		964B43D029BB0ED0007DBDBE /* XCRemoteSwiftPackageReference "swift-dependencies" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-dependencies";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		964B43D129BB0ED0007DBDBE /* Dependencies */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 964B43D029BB0ED0007DBDBE /* XCRemoteSwiftPackageReference "swift-dependencies" */;
+			productName = Dependencies;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 964B43B129BB0EA4007DBDBE /* Project object */;
 }
